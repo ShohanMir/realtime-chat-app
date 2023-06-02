@@ -1,5 +1,29 @@
+const User = require('../../models/user');
+const bcrypt = require('bcryptjs');
+
 const postLogin = async (req, res, next) => {
-  res.send('login route');
+  try {
+    const { mail, password } = req.body;
+
+    const user = await User.findOne({ mail: mail.toLowerCase() });
+
+    if (user && (await bcrypt.compare(password, user.password))) {
+      // send new token
+      const token = 'JWT token';
+
+      res.status(201).json({
+        userDetails: {
+          mail: user.email,
+          token: token,
+          username: user.username,
+        },
+      });
+    }
+
+    return res.status(400).send('Invalid credentials. Please try again');
+  } catch (err) {
+    res.status(500).send('Something went wrong. Please try again');
+  }
 };
 
 module.exports = postLogin;
