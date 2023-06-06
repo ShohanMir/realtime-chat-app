@@ -11,6 +11,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use('/api/v1', api);
+app.use('/v1/api/', api);
 
 module.exports = app;
