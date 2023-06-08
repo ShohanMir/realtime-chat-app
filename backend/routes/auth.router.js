@@ -2,6 +2,7 @@ const express = require('express');
 const authRouter = express.Router();
 const Joi = require('joi');
 const validator = require('express-joi-validation').createValidator({});
+const authMiddleware = require('../middleware/auth.middleware');
 
 const authControllers = require('../controllers/auth/auth.controller');
 
@@ -26,5 +27,9 @@ authRouter.post(
   validator.body(loginSchema),
   authControllers.controllers.postLogin
 );
+
+authRouter.get('/test', authMiddleware, (req, res) => {
+  res.send('request reset');
+});
 
 module.exports = authRouter;
