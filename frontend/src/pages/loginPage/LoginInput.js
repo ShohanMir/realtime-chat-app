@@ -1,7 +1,7 @@
 import React from 'react';
 import InputWithLabels from '../../shared/components/InputWithLabels';
 
-const LoginPageInput = ({ mail, setMail, password, setPassword }) => {
+const LoginInput = ({ mail, setMail, password, setPassword }) => {
   return (
     <>
       <InputWithLabels
@@ -23,4 +23,4 @@ const LoginPageInput = ({ mail, setMail, password, setPassword }) => {
   );
 };
 
-export default LoginPageInput;
+export default LoginInput;
