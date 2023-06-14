@@ -1,5 +1,5 @@
 import React from 'react';
-import Box from '@mui/metarial/Box';
+import Box from '@mui/material/Box';
 import { styled } from '@mui/system';
 
 const BoxWrapper = styled('div')({
@@ -14,7 +14,19 @@ const BoxWrapper = styled('div')({
 const AuthBox = (props) => {
   return (
     <BoxWrapper>
-      <Box>{props.children}</Box>
+      <Box
+        sx={{
+          width: 700,
+          height: 400,
+          bgcolor: '#36393f',
+          borderRadius: '5px',
+          boxShadow: '0 2px 10px 0 rgb(0 0 0 / 20%)',
+          flexDirection: 'column',
+          padding: '25px',
+        }}
+      >
+        {props.children}
+      </Box>
     </BoxWrapper>
   );
 };
