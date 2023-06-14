@@ -6,8 +6,8 @@ import {
   Navigate,
 } from 'react-router-dom';
 import './App.css';
-import LoginPage from './pages/authPages/LoginPage';
-import RegisterPage from './pages/authPages/RegisterPage';
+import LoginPage from './pages/loginPage/LoginPage';
+import RegisterPage from './pages/registerPage/RegisterPage';
 import Dashboard from './pages/dashboard/Dashboard';
 
 function App() {

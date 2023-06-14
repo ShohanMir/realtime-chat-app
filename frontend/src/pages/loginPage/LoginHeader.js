@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography } from '@mui/material';
 
-const LoginPageHeader = () => {
+const LoginHeader = () => {
   return (
     <>
       <Typography variant="h5" sx={{ color: '#FFFF' }}>
@@ -14,4 +14,4 @@ const LoginPageHeader = () => {
   );
 };
 
-export default LoginPageHeader;
+export default LoginHeader;
