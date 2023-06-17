@@ -10,6 +10,6 @@ const validatePassword = (password) => {
 };
 
 const validateMail = (mail) => {
-  const emailPattern = '';
+  const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-z0-9.-]+\[a-zA-Z]{2,4}$/;
   return emailPattern.test(mail);
 };
