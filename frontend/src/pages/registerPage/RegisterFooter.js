@@ -9,7 +9,7 @@ const getFormNotValidMessage = () => {
 };
 
 const getFormValidMessage = () => {
-  return 'Press to login';
+  return 'Press to Register';
 };
 
 const RegisterFooter = ({ handleRegister, isFormValid }) => {
@@ -24,7 +24,7 @@ const RegisterFooter = ({ handleRegister, isFormValid }) => {
       >
         <div>
           <PrimaryButton
-            label="Login"
+            label="Register"
             additionalStyles={{ marginTop: '30px' }}
             disable={!isFormValid}
             onClick={handleRegister}
